@@ -1,0 +1,193 @@
+/* File Name: Fetch.css */
+
+.fetch-container {
+  background: #0f172a;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  margin: 20px 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fetch-header {
+  background: #1e293b;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.fetch-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.window-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot.red { background-color: #ef4444; }
+.dot.yellow { background-color: #f59e0b; }
+.dot.green { background-color: #10b981; }
+
+.file-name {
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+}
+
+.fetch-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.action-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.action-btn.success {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: #34d399;
+}
+
+.json-view-wrapper {
+  position: relative;
+  max-height: 450px;
+  overflow-y: auto;
+  background: #090d16;
+  padding: 20px;
+}
+
+.json-view {
+  margin: 0;
+  color: #e2e8f0;
+  font-family: 'Fira Code', 'Cascadia Code', Consolas, Monaco, monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+/* Syntax highlighting simulation colors */
+.json-view {
+  color: #cbd5e1; /* Default slate for braces/brackets/commas */
+}
+
+.json-key {
+  color: #38bdf8; /* Light blue for keys */
+  font-weight: 500;
+}
+
+.json-string {
+  color: #34d399; /* Emerald/green for values */
+}
+
+.json-number {
+  color: #fb923c; /* Orange for numbers */
+}
+
+.json-boolean {
+  color: #f472b6; /* Pink for booleans */
+  font-weight: 600;
+}
+
+.json-null {
+  color: #94a3b8; /* Slate gray for null */
+  font-style: italic;
+}
+
+/* Scrollbar styling */
+.json-view-wrapper::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.json-view-wrapper::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+.json-view-wrapper::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+.json-view-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Status overlays */
+.status-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: #94a3b8;
+  background: #090d16;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(59, 130, 246, 0.1);
+  border-radius: 50%;
+  border-top-color: #3b82f6;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+.error-icon {
+  font-size: 40px;
+  color: #ef4444;
+  margin-bottom: 16px;
+}
+
+.error-title {
+  color: #f1f5f9;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.error-desc {
+  font-size: 14px;
+  color: #64748b;
+  text-align: center;
+  max-width: 300px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
